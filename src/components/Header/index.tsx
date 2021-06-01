@@ -1,4 +1,4 @@
-import dtMoneyLogo from "../assets/logo.svg";
+import dtMoneyLogo from "../../assets/logo.svg";
 
 import { Container, Content } from "./styles";
 
