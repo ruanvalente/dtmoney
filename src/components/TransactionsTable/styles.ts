@@ -17,7 +17,7 @@ export const Container = styled.div`
       line-height: 1.6rem;
     }
 
-    tr {
+    tbody tr {
       transition: transform 0.2s;
 
       &:hover {

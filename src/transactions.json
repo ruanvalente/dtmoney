@@ -1,0 +1,33 @@
+[
+  {
+    "id": 1,
+    "title": "Desenvolvimento de site",
+    "amount": 120000,
+    "category": "Venda",
+    "date": "13/04/2021"
+  },
+
+  {
+    "id": 2,
+    "title": "Hamburguer",
+    "amount": 59,
+    "category": "Alimentação",
+    "date": "10/04/2021"
+  },
+
+  {
+    "id": 3,
+    "title": "Aluguel do apartamento",
+    "amount": 12000,
+    "category": "Casa",
+    "date": "27/03/2021"
+  },
+
+  {
+    "id": 4,
+    "title": "Computador",
+    "amount": 5400,
+    "category": "Venda",
+    "date": "15/03/2021"
+  }
+]

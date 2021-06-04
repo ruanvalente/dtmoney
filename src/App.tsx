@@ -11,7 +11,7 @@ dtMoneyService();
 
 export function App() {
   useEffect(() => {
-    fetch("htpp://localhost:3000/api/transactions")
+    fetch("htpp://localhost:3000/api/v1/transaction")
       .then((response) => response.json())
       .then((data) => console.log(data));
   }, []);

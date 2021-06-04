@@ -1,43 +1,50 @@
-import { createServer } from "miragejs";
+import { createServer, Model } from "miragejs";
+import transactions from "../transactions.json";
+// import faker from "faker";
 
 export function dtMoneyService() {
   createServer({
+    models: {
+      // transaction: Model,
+      transaction: Model,
+    },
+
+    // factories: {
+    //   transaction: Factory.extend({
+    //     title() {
+    //       return faker.fake("{{commerce.product}}");
+    //     },
+    //     description() {
+    //       return faker.fake("{{commerce.productDescription}}");
+    //     },
+
+    //     category() {
+    //       return faker.fake("{{commerce.department}}");
+    //     },
+
+    //     amount() {
+    //       return faker.fake("{{commerce.price}}");
+    //     },
+
+    //     date() {
+    //       return faker.fake("{{datatype.datetime}}");
+    //     },
+    //   }),
+    // },
+
+    seeds(server) {
+      // server.createList("transaction", 10);
+      server.loadFixtures();
+    },
+
+    fixtures: {
+      transactions,
+    },
+
     routes() {
-      this.get("/api/transactions", () => ({
-        transactions: [
-          {
-            id: Math.random(),
-            title: "Desenvolvimento de site",
-            amount: 12000,
-            category: "Venda",
-            date: new Date().toISOString(),
-          },
+      this.namespace = "api";
 
-          {
-            id: Math.random(),
-            title: "Hamburguer",
-            amount: 59.0,
-            category: "Alimentação",
-            date: new Date().toISOString(),
-          },
-
-          {
-            id: Math.random(),
-            title: "Aluguel do apartamento",
-            amount: 12000,
-            category: "Casa",
-            date: new Date().toISOString(),
-          },
-
-          {
-            id: Math.random(),
-            title: "Computador",
-            amount: 5400,
-            category: "Venda",
-            date: new Date().toISOString(),
-          },
-        ],
-      }));
+      this.get("v1/transaction", (scheme) => scheme.db.transactions);
     },
   });
 }
