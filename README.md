@@ -54,7 +54,7 @@ $ npm test ou yarn test
 ```
 
 <p align="center">
-Feito com ❤️ por <a href="https://linkedin.com/in/ruan.valente" target="_blank">
+Feito com ❤️ por <a href="https://www.linkedin.com/in/ruan-valente/" target="_blank">
     <strong>Ruan Valente 👋🏽</strong>
   </a>
 </p>
