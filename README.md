@@ -54,7 +54,9 @@ $ npm test ou yarn test
 ```
 
 <p align="center">
-Feito com ❤️ por Ruan Valente 👋🏽
+Feito com ❤️ por <a href="https://linkedin.com/in/ruan.valente" target="_blank">
+    <strong>Ruan Valente 👋🏽</strong>
+  </a>
 </p>
 
 [reactjs]: https://reactjs.org/
