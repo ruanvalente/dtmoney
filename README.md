@@ -8,14 +8,9 @@
 
 <blockquote align="center">“Não espere para plantar, apenas tenha paciência para colher”!</blockquote>
 
-<!-- <div align="center">
-  <img src="https://i.postimg.cc/mZ0J98RM/Captura-de-tela-2021-05-23-192923.png" alt="Screen project">
-
-   <img src="https://i.postimg.cc/4Nk2yybQ/Captura-de-tela-2021-05-23-195736.png" alt="Screen project">
-
-   <img src="https://i.postimg.cc/L6pvR72y/Captura-de-tela-2021-05-23-200300.png" alt="Screen project">
-
-</div> -->
+<div align="center">
+  <img src="https://i.postimg.cc/HxTKWzVX/Captura-de-tela-2021-06-07-202548.png" alt="Screen project">
+</div>
 
 ## 🚀 Sobre o desafio
 
