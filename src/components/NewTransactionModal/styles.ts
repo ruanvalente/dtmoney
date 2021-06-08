@@ -1,4 +1,49 @@
 import styled from "styled-components";
+import { darken } from "polished";
+
+export const Container = styled.div`
+  max-width: 536px;
+  width: 100%;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+
+  button {
+    width: 100%;
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+    padding: 0.8rem 2rem;
+
+    background: var(--dt-background);
+    color: var(--dt-title);
+
+    font-weight: normal;
+    font-size: 1rem;
+
+    border: none;
+    border: 1px solid var(--dt-background-secondary);
+    border-radius: 0.25rem;
+
+    transition: border-color 0.3s;
+
+    img {
+      width: 20px;
+      height: 20px;
+    }
+
+    &:hover {
+      border-color: ${darken(0.1, "#d7d7d7")};
+    }
+  }
+`;
 
 export const Form = styled.form`
   max-width: 576px;
