@@ -1,5 +1,15 @@
 import styled from "styled-components";
-import { darken } from "polished";
+import { darken, transparentize } from "polished";
+
+type TransactionButtonBoxProps = {
+  isActive: boolean;
+  activeColor: "green" | "red";
+};
+
+const colors = {
+  green: "#33CC95",
+  red: "#E62E4D",
+};
 
 export const Container = styled.div`
   max-width: 536px;
@@ -11,37 +21,44 @@ export const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
+`;
 
-  button {
-    width: 100%;
-    height: 4rem;
+export const TransactionButtonBox = styled.button<TransactionButtonBoxProps>`
+  width: 100%;
+  height: 4rem;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 
-    padding: 0.8rem 2rem;
+  padding: 0.8rem 2rem;
 
-    background: var(--dt-background);
-    color: var(--dt-title);
+  background: ${(props) =>
+    props.isActive
+      ? transparentize(0.9, colors[props.activeColor])
+      : "transparent"};
+  color: var(--dt-title);
 
-    font-weight: normal;
-    font-size: 1rem;
+  font-weight: normal;
+  font-size: 1rem;
 
-    border: none;
-    border: 1px solid var(--dt-background-secondary);
-    border-radius: 0.25rem;
+  border: none;
+  border: 1px solid var(--dt-background-secondary);
+  border-radius: 0.25rem;
 
-    transition: border-color 0.3s;
+  transition: border-color 0.3s;
 
-    img {
-      width: 20px;
-      height: 20px;
-    }
+  img {
+    width: 20px;
+    height: 20px;
+  }
 
-    &:hover {
-      border-color: ${darken(0.1, "#d7d7d7")};
-    }
+  &:hover {
+    border-color: ${darken(0.1, "#d7d7d7")};
+  }
+
+  &::selection {
+    background: red;
   }
 `;
 
