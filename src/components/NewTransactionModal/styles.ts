@@ -62,7 +62,7 @@ export const TransactionButtonBox = styled.button<TransactionButtonBoxProps>`
   }
 `;
 
-export const Form = styled.form`
+export const TransactionForm = styled.form`
   max-width: 576px;
   margin: 0 auto;
 

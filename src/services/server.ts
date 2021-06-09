@@ -42,9 +42,14 @@ export function dtMoneyService() {
     },
 
     routes() {
-      this.namespace = "api";
+      this.namespace = "api/v1";
 
-      this.get("v1/transaction", (scheme) => scheme.db.transactions);
+      this.get("transaction", (scheme) => scheme.all("transaction"));
+      this.post("transaction", (scheme, request) => {
+        const data = JSON.parse(request.requestBody);
+
+        return scheme.create("transaction", data);
+      });
     },
   });
 }
