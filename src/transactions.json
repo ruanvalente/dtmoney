@@ -2,15 +2,17 @@
   {
     "id": 1,
     "title": "Desenvolvimento de site",
-    "amount": 120000,
+    "value": 120000,
     "category": "Venda",
+    "type": "deposit",
     "date": "13/04/2021"
   },
 
   {
     "id": 2,
     "title": "Hamburguer",
-    "amount": 59,
+    "value": 59,
+    "type": "withdraw",
     "category": "Alimentação",
     "date": "10/04/2021"
   },
@@ -18,7 +20,8 @@
   {
     "id": 3,
     "title": "Aluguel do apartamento",
-    "amount": 12000,
+    "value": 12000,
+    "type": "withdraw",
     "category": "Casa",
     "date": "27/03/2021"
   },
@@ -26,7 +29,8 @@
   {
     "id": 4,
     "title": "Computador",
-    "amount": 5400,
+    "value": 5400,
+    "type": "deposit",
     "category": "Venda",
     "date": "15/03/2021"
   }

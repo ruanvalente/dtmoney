@@ -38,11 +38,11 @@ export const Container = styled.div`
         color: var(--dt-title);
       }
 
-      &.income {
+      &.withdraw {
         color: var(--dt-danger);
       }
 
-      &.outcome {
+      &.deposit {
         color: var(--dt-success);
       }
     }

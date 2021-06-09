@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import Modal from "react-modal";
 
@@ -8,7 +8,6 @@ import { DashBoard } from "./components/Dashboard";
 import { GlobalStyle } from "./styles/globalStyle";
 
 import { dtMoneyService } from "./services/server";
-import { api } from "./services/api";
 import { NewTransactionModal } from "./components/NewTransactionModal";
 
 dtMoneyService();
@@ -26,10 +25,6 @@ export function App() {
   function handleCloseNewTransactionModal() {
     setIsNewTransactionModalClose(false);
   }
-
-  useEffect(() => {
-    api.get("transaction").then((response) => console.log(response.data));
-  }, []);
 
   return (
     <>
