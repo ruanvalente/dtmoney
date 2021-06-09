@@ -6,6 +6,9 @@ import { Container } from "./styles";
 
 import { Transaction } from "../../types/transaction";
 
+import { formatNumber } from "../../utils/formatNumber";
+import { FormatDate } from "../../utils/formatDate";
+
 export function TransactionsTable() {
   const [transactions, setTransaction] = useState<Transaction[]>([]);
 
@@ -30,9 +33,11 @@ export function TransactionsTable() {
           {transactions.map((transaction) => (
             <tr key={transaction.id}>
               <td>{transaction.title}</td>
-              <td className={transaction.type}>R$ {transaction.value}</td>
+              <td className={transaction.type}>
+                {formatNumber(transaction.value)}
+              </td>
               <td>{transaction.category}</td>
-              <td>{transaction.date}</td>
+              <td>{FormatDate(transaction.date)}</td>
             </tr>
           ))}
         </tbody>
