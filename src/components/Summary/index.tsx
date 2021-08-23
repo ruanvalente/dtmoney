@@ -9,7 +9,7 @@ import totalIcon from "../../assets/total.svg";
 import { CardItem, Container } from "./styles";
 
 export function Summary() {
-  const transactions = useContext(TransactionsContext);
+  const { transactions } = useContext(TransactionsContext);
 
   console.log(transactions);
 

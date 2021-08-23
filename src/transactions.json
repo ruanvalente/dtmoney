@@ -5,7 +5,7 @@
     "value": 12000,
     "category": "Venda",
     "type": "deposit",
-    "date": "2021-06-09T22:10:31.029Z"
+    "createdAt": "2021-06-09T22:10:31.029Z"
   },
 
   {
@@ -14,7 +14,7 @@
     "value": 59,
     "type": "withdraw",
     "category": "Alimentação",
-    "date": "2021-04-10T21:30:00.000Z"
+    "createdAt": "2021-04-10T21:30:00.000Z"
   },
 
   {
@@ -23,7 +23,7 @@
     "value": 12000,
     "type": "withdraw",
     "category": "Casa",
-    "date": "2021-07-27T12:00:00.000Z"
+    "createdAt": "2021-07-27T12:00:00.000Z"
   },
 
   {
@@ -32,6 +32,6 @@
     "value": 5400,
     "type": "deposit",
     "category": "Venda",
-    "date": "2021-06-09T22:10:31.029Z"
+    "createdAt": "2021-06-09T22:10:31.029Z"
   }
 ]

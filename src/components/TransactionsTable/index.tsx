@@ -7,7 +7,7 @@ import { FormatDate } from "../../utils/formatDate";
 import { Container } from "./styles";
 
 export function TransactionsTable() {
-  const transactions = useContext(TransactionsContext);
+  const { transactions } = useContext(TransactionsContext);
   return (
     <Container>
       <table>
@@ -25,10 +25,10 @@ export function TransactionsTable() {
             <tr key={transaction.id}>
               <td>{transaction.title}</td>
               <td className={transaction.type}>
-                {formatNumber(transaction.value)}
+                {formatNumber(transaction.amount)}
               </td>
               <td>{transaction.category}</td>
-              <td>{FormatDate(transaction.date)}</td>
+              <td>{FormatDate(transaction.createdAt)}</td>
             </tr>
           ))}
         </tbody>
