@@ -27,12 +27,19 @@ export function NewTransactionModal({
   async function handleCreateNewTransaction(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
 
-    createaNewTransaction({
+    await createaNewTransaction({
       title,
       category,
       type,
       amount,
     });
+
+    setTitle("");
+    setAmount(0);
+    setCategory("");
+    setType("deposit");
+
+    onRequestCloseModal();
   }
 
   return (

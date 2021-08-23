@@ -9,7 +9,9 @@ interface TransactionContextProps {
 
 interface TransactionContextData {
   transactions: Transaction[];
-  createaNewTransaction: (transaction: CreateaNewTransactionProps) => void;
+  createaNewTransaction: (
+    transaction: CreateaNewTransactionProps
+  ) => Promise<void>;
 }
 
 type CreateaNewTransactionProps = Omit<Transaction, "id" | "createdAt">;
@@ -28,9 +30,15 @@ export function TransactionsProvider({ children }: TransactionContextProps) {
   }, []);
 
   async function createaNewTransaction(
-    transaction: CreateaNewTransactionProps
+    transactionData: CreateaNewTransactionProps
   ) {
-    await api.post("transaction", transaction);
+    const response = await api.post("transaction", {
+      ...transactionData,
+      createdAt: new Date(),
+    });
+    const { transaction } = response.data;
+
+    setTransaction([...transactions, transaction]);
   }
 
   return (

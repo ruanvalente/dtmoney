@@ -2,7 +2,7 @@
   {
     "id": 1,
     "title": "Desenvolvimento de site",
-    "value": 12000,
+    "amount": 12000,
     "category": "Venda",
     "type": "deposit",
     "createdAt": "2021-06-09T22:10:31.029Z"
@@ -11,7 +11,7 @@
   {
     "id": 2,
     "title": "Hamburguer",
-    "value": 59,
+    "amount": 59,
     "type": "withdraw",
     "category": "Alimentação",
     "createdAt": "2021-04-10T21:30:00.000Z"
@@ -20,7 +20,7 @@
   {
     "id": 3,
     "title": "Aluguel do apartamento",
-    "value": 12000,
+    "amount": 12000,
     "type": "withdraw",
     "category": "Casa",
     "createdAt": "2021-07-27T12:00:00.000Z"
@@ -29,7 +29,7 @@
   {
     "id": 4,
     "title": "Computador",
-    "value": 5400,
+    "amount": 5400,
     "type": "deposit",
     "category": "Venda",
     "createdAt": "2021-06-09T22:10:31.029Z"
