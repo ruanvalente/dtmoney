@@ -7,6 +7,8 @@ import { DashBoard } from "./components/Dashboard";
 
 import { GlobalStyle } from "./styles/globalStyle";
 
+import { TransactionsProvider } from "./context/transactionsContext";
+
 import { dtMoneyService } from "./services/server";
 import { NewTransactionModal } from "./components/NewTransactionModal";
 
@@ -27,7 +29,7 @@ export function App() {
   }
 
   return (
-    <>
+    <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
       <DashBoard />
       <GlobalStyle />
@@ -36,6 +38,6 @@ export function App() {
         isOpen={isNewTransactionModalOpen}
         onRequestCloseModal={handleCloseNewTransactionModal}
       />
-    </>
+    </TransactionsProvider>
   );
 }
